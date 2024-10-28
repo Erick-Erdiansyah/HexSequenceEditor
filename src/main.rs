@@ -105,12 +105,12 @@ impl eframe::App for MyApp {
 
             ui.horizontal(|ui| {
                 ui.label("Search hex sequence:");
-                ui.text_edit_singleline(&mut self.search_sequence);
+                ui.text_edit_multiline(&mut self.search_sequence);
             });
 
             ui.horizontal(|ui| {
                 ui.label("Replace hex sequence:");
-                ui.text_edit_singleline(&mut self.replace_sequence);
+                ui.text_edit_multiline(&mut self.replace_sequence);
             });
 
             if ui.button("Patch").clicked() {
